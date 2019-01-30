@@ -218,3 +218,10 @@ On Windows, omit the sudo:
 
 rabbitmqctl.bat list_queues
 Time to move on to part 2 and build a simple work queue.
+
+
+####
+ java -jar build/libs/rabbitmq-amqp-tutorials-0.0.1-SNAPSHOT.jar --spring.profiles.active=work-queues,receiver
+java -jar build/libs/rabbitmq-amqp-tutorials-0.0.1-SNAPSHOT.jar --spring.profiles.active=work-queues,sender
+sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+
